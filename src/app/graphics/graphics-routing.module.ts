@@ -9,8 +9,8 @@ const routes: Routes = [
       path: '',
       component: LayoutPageComponent,
       children: [
-          { path: 'kansas', component: KansasWeatherComponent },
-          { path: 'columbia', component: ColumbiaWeatherComponent },
+          { path: 'TOP', component: KansasWeatherComponent },
+          { path: 'LWX', component: ColumbiaWeatherComponent },
           { path: '**', redirectTo: ''}
       ]
   }

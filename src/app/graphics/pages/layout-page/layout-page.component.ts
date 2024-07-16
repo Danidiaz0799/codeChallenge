@@ -8,8 +8,8 @@ import { Component } from '@angular/core';
 export class LayoutPageComponent {
 
   public sidebarItems = [
-    { label: 'Kansas Weather', icon: 'label', url: './kansas' },
-    { label: 'Columbia Weather', icon: 'label', url: './columbia' },
+    { label: 'Kansas Weather', icon: 'label', url: './TOP' },
+    { label: 'Columbia Weather', icon: 'label', url: './LWX' },
   ];
 
 }

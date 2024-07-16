@@ -27,13 +27,21 @@
         </button>
 
         <span class="spacer"></span>
-        <button mat-button>
+        <button mat-button routerLink="/weather">
             Weather
         </button>
     </mat-toolbar>
 
     <div class="container">
+        <h1 class="title">Weather</h1>
         <router-outlet></router-outlet>
+        <div class="button-container">
+            <button mat-raised-button color="primary" routerLink="/weather/TOP">
+                Kansas Weather
+            </button>
+            <button mat-raised-button color="accent" routerLink="/weather/LWX">
+                Columbia Weather
+            </button>
+        </div>
     </div>
-
 </mat-sidenav-container>

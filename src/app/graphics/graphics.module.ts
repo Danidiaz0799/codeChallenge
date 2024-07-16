@@ -6,12 +6,14 @@ import { CommonModule } from '@angular/common';
 import { MaterialModule } from '../material/material.module';
 import { NgChartjsModule } from 'ng-chartjs';
 import { ColumbiaWeatherComponent } from './pages/columbia-weather/columbia-weather.component';
+import { KansasWeatherComponent } from './pages/kansas-weather/kansas-weather.component';
 
 
 @NgModule({
   declarations: [
     LayoutPageComponent,
-    ColumbiaWeatherComponent
+    ColumbiaWeatherComponent,
+    KansasWeatherComponent
   ],
   imports: [
     CommonModule,

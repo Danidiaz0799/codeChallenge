@@ -28,8 +28,7 @@ export class ColumbiaWeatherComponent implements OnInit {
   }
 
   getColumbiaWeather(): void {
-    this.weatherService.getWeatherColumbia().subscribe(weatherData => {
-      console.log(weatherData);
+    this.weatherService.getWeather('columbia').subscribe(weatherData => {
       this.weatherData = weatherData.properties.periods;
       this.dataSource = new MatTableDataSource(this.weatherData.slice(this.currentIndex, this.currentIndex + this.daysToShow * 2));
       this.dataSource.paginator = this.paginator;
@@ -46,7 +45,7 @@ export class ColumbiaWeatherComponent implements OnInit {
     }
 
     this.chart = new Chart('weatherChart', {
-      type: 'bar',
+      type: 'line',
       data: {
         labels: labels,
         datasets: [{
@@ -80,7 +79,9 @@ export class ColumbiaWeatherComponent implements OnInit {
         },
         scales: {
           y: {
-            beginAtZero: true,
+            beginAtZero: false,
+            min: 50,
+            max: 110,
             ticks: {
               color: '#4B5563',
               font: {
@@ -96,7 +97,10 @@ export class ColumbiaWeatherComponent implements OnInit {
               font: {
                 size: 14,
                 family: 'Inter, sans-serif'
-              }
+              },
+              maxRotation: 0, // Establece la rotación máxima a 0 grados
+              minRotation: 30, // Establece la rotación mínima a 0 grados
+              autoSkip: true
             }
           }
         }

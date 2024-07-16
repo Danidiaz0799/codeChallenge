@@ -1,0 +1,22 @@
+.spacer {
+    flex: 1 1 auto;
+}
+
+.container {
+    padding: 16px;
+    text-align: center;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #3f51b5;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
